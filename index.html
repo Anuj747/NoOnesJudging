@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoOne’sJudging — Share Your Words Freely</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="image.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-badge">NJ</div>
+        <span>NoOne’sJudging</span>
+      </div>
+      <nav class="nav">
+        <a href="#write">Write</a>
+        <a href="#read">Read</a>
+        <a href="#prompts">Prompts</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="wrap">
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-card">
+        <span class="hero-badge">Because every thought deserves a page</span>
+        <h1>Share your <em>poems</em>, thoughts & quiet truths.<br/>Be heard. Be kind. Be you.</h1>
+        <p>No reviews. No ratings. Just words. Welcome to No One's judging a space where words breathe freely.
+          Here, poetry isn't measured, compared, or confined. It's a sanctuary for raw thoughts, quiet whispers,
+          and untold stories. Write without fear, read without judgment, let your soul spill across the page.
+          Because every voice deserves to be heard, and every poem has a home.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-dark" href="#write">Start writing</a>
+          <a class="btn btn-ghost" href="#read">Browse recent posts</a>
+        </div>
+        <div class="note">Design inspired by a warm beige / black bookstore layout — reimagined for community writing.</div>
+      </div>
+    </section>
+
+    <!-- SECTIONS -->
+    <section class="sections" aria-label="Core sections">
+
+      <!-- WRITE SECTION -->
+      <article class="card span-6" id="write">
+        <div class="meta">Write & Share</div>
+        <h3>Write your poem / thoughts</h3>
+        <div class="write-panel">
+          <div class="inline">
+            <input type="text" placeholder="Your name or pen name (optional)" aria-label="Your name or pen name" />
+            <input type="text" placeholder="Title (optional)" aria-label="Poem title" />
+          </div>
+          <textarea placeholder="Pour your words here… (HTML/CSS only demo – no save yet)"></textarea>
+          <div class="inline">
+            <button class="btn btn-dark" disabled title="Static demo">Share (coming soon)</button>
+            <button class="btn btn-ghost" onclick="window.location.hash='#read'" type="button">See community</button>
+          </div>
+          <div class="helper">This is a static HTML/CSS version. We can add saving later with a lightweight backend (Firebase/Node/SQLite).</div>
+        </div>
+      </article>
+
+      <!-- READ SECTION -->
+      <article class="card span-6" id="read">
+        <div class="meta">Community</div>
+        <h3>Recent Poems & Thoughts</h3>
+        <div class="poem-list" role="list">
+          <div class="poem" role="listitem">
+            <h4>for you, Always</h4>
+            <div class="by">by A.</div>
+            <p>I realized that sometimes love means taking a step back.
+            I think if you care about somebody, you should want them to be happy. 
+            Even if you wind up being left out.</p>
+          </div>
+          <div class="poem" role="listitem">
+            <h4>Window Light</h4>
+            <div class="by">by Mira (she/they)</div>
+            <p>i place my fears on the sill, watch them dry in sun; 
+            when they crinkle, i sweep them— like last year’s leaves.</p>
+          </div>
+          <div class="poem" role="listitem">
+            <h4>Untitled</h4>
+            <div class="by">by River</div>
+            <p>today i carried my past in both hands, 
+            so i could keep my pockets open for joy.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROMPTS / EVENTS -->
+      <article class="card span-4" id="prompts">
+        <div class="meta">Weekly prompt</div>
+        <h3>Writing Prompt: “Threshold”</h3>
+        <p>Write about a doorway, a first step, a breath before the leap. Keep it under 8 lines if you like short forms.</p>
+      </article>
+
+      <article class="card span-4">
+        <div class="meta">Challenge</div>
+        <h3>Gentle 7-Day Challenge</h3>
+        <p>One small poem each day. Try a different sense daily: sound, touch, taste, sight, smell, memory, hope.</p>
+      </article>
+
+      <article class="card span-4">
+        <div class="meta">Feature</div>
+        <h3>Featured Poet: Starling</h3>
+        <p>“I’m learning the sky has room for many kinds of wings.” — excerpt from <em>Small Weather</em>.</p>
+      </article>
+
+      <article class="card span-8">
+        <div class="meta">Community Care</div>
+        <h3>Guidelines (No one’s judging, but we care)</h3>
+        <ul>
+          <li>Kindness first. Share feedback only if asked.</li>
+          <li>Credit quotes, mark triggers, respect boundaries.</li>
+          <li>No hate speech, harassment, or plagiarism. Ever.</li>
+        </ul>
+      </article>
+
+      <article class="card span-4">
+        <div class="meta">Resources</div>
+        <h3>Inspiration Board</h3>
+        <p>Try forms: haiku, free verse, tanka, micro-poems. Explore themes: belonging, silence, mornings, small joys.</p>
+      </article>
+
+      <!-- ABOUT SECTION -->
+      <article class="card span-12" id="about">
+        <div class="about">
+          <div class="paper">
+            <div class="meta">Why we exist</div>
+            <h3>NoOne’sJudging</h3>
+            <p>We built this space for people who write in the margins of their day. You don’t need a workshop. You need a warm room where your words are enough.</p>
+            <p>As the platform grows, we’ll add simple ways to share, save, and explore poems — always with consent, control, and care.</p>
+            <div class="inline" style="margin-top:8px;">
+              <a class="btn btn-dark" href="#write">Write now</a>
+              <a class="btn btn-ghost" href="#read">Discover poems</a>
+            </div>
+          </div>
+          <div class="badge-tile">
+            <img src="images/Black White Bold Modern Studio Logo.png" alt="Writing illustration" style="width:100%; border-radius:20px;">
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="foot">
+      <div class="foot-inner">
+        <div>
+          <h4>Contact</h4>
+          <p>hello@noonesjudging.site<br/>+91 00000 00000</p>
+        </div>
+        <div>
+          <h4>Social</h4>
+          <p><a href="#">@waitforitanuj</a> on Instagram<br/><a href="#">Community Discord</a></p>
+        </div>
+        <div>
+          <h4>Credits</h4>
+          <p>Design reimagined from a bookstore layout to a poetry community in warm beige/black.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tiny">© <span id="y">2025</span> NoOne’sJudging — Built with HTML & CSS</div>
+  </footer>
+
+  <script>
+    // auto year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
