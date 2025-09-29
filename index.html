@@ -4,43 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NoOne’sJudging — Share Your Words Freely</title>
+  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?
 
 family=Lora:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- External CSS -->
+
+  <!-- Your CSS files (check exact filenames on GitHub) -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="image.css">
+
+  <!-- Inline style for long poem handling -->
   <style>
     /* LONG POEM HANDLING */
     .poem p {
       white-space: pre-wrap; /* preserve line breaks */
       word-wrap: break-word;
       overflow-wrap: break-word;
+      margin: 0;
     }
 
     .poem {
-      max-height: 400px; /* optional, scroll for very long poems */
+      max-height: 400px; /* optional scroll for very long poems */
       overflow-y: auto;
-      background: #fff;
-      border: 1px solid rgba(17,17,17,.06);
-      border-radius:16px;
-      padding:18px;
-      box-shadow: 0 10px 30px rgba(17,17,17,.06), 0 2px 10px rgba(17,17,17,.05);
-      margin-bottom: 18px;
     }
-
-    /* make poem-list grid work properly */
-    .poem-list {
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:18px;
-      grid-column: 1 / -1;
-      margin-top: 28px;
-    }
-
-    @media (max-width: 980px){ .poem-list{ grid-template-columns: repeat(2, 1fr);} }
-    @media (max-width: 640px){ .poem-list{ grid-template-columns: 1fr;} }
   </style>
 </head>
 <body>
@@ -69,7 +56,7 @@ family=Lora:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
       <div class="hero-card">
         <span class="hero-badge">Because every thought deserves a page</span>
         <h1>Share your <em>poems</em>, thoughts & quiet truths.<br/>Be heard. Be kind. Be you.</h1>
-        <p>No reviews. No ratings. Just words. Welcome to No One's judging a space where words breathe freely.
+        <p>No reviews. No ratings. Just words. Welcome to No One's judging—a space where words breathe freely.
           Here, poetry isn't measured, compared, or confined. It's a sanctuary for raw thoughts, quiet whispers,
           and untold stories. Write without fear, read without judgment, let your soul spill across the page.
           Because every voice deserves to be heard, and every poem has a home.
@@ -111,10 +98,8 @@ community</button>
         </form>
       </article>
 
-      <!-- POEM LIST SECTION -->
-      <div class="poem-list span-12" role="list" id="poem-list">
-        <!-- Poems will be injected here dynamically -->
-      </div>
+      <!-- READ SECTION -->
+      <div class="poem-list span-6" role="list" id="poem-list"></div>
 
       <!-- PROMPTS / EVENTS -->
       <article class="card span-4" id="prompts">
@@ -202,6 +187,7 @@ border-radius:20px;">
     <div class="tiny">© <span id="y">2025</span> NoOne’sJudging — Built with HTML & CSS</div>
   </footer>
 
+  <!-- SCRIPT -->
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
 
@@ -238,5 +224,6 @@ border-radius:20px;">
     // initial load
     loadPosts();
   </script>
+
 </body>
 </html>
