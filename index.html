@@ -5,16 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NoOne’sJudging — Share Your Words Freely</title>
   
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-family=Lora:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Your CSS files (check exact filenames on GitHub) -->
   <link rel="stylesheet" href="style.css">
- 
 
-  <!-- Inline style for long poem handling -->
   <style>
     /* LONG POEM HANDLING */
     .poem p {
@@ -32,7 +26,6 @@ family=Lora:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
 </head>
 <body>
 
-  <!-- NAVBAR -->
   <header class="nav">
     <div class="nav-inner">
       <div class="brand">
@@ -48,10 +41,8 @@ family=Lora:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
   <main class="wrap">
 
-    <!-- HERO -->
     <section class="hero" id="home">
       <div class="hero-card">
         <span class="hero-badge">Because every thought deserves a page</span>
@@ -65,43 +56,34 @@ family=Lora:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
           <a class="btn btn-dark" href="#write">Start writing</a>
           <a class="btn btn-ghost" href="#read">Browse recent posts</a>
         </div>
-        <div class="note">Design inspired by a warm beige / black bookstore layout — reimagined for community 
-
-writing.</div>
+        <div class="note">Design inspired by a warm beige / black bookstore layout — reimagined for community writing.</div>
       </div>
     </section>
 
-    <!-- SECTIONS -->
     <section class="sections" aria-label="Core sections">
 
-      <!-- WRITE SECTION -->
       <article class="card span-6" id="write">
         <div class="meta">Write & Share</div>
         <h3>Write your poem / thoughts</h3>
         <form id="write-form">
           <div class="write-panel">
             <div class="inline">
-              <input type="text" name="author" placeholder="Your name or pen name (optional)" aria-label="Your name or 
-
-pen name" />
-              <input type="text" name="title" placeholder="Title (optional)" aria-label="Poem title" />
+              <input type="text" name="author" id="author" placeholder="Your name or pen name (optional)" aria-label="Your name or pen name" />
+              <input type="text" name="title" id="title" placeholder="Title (optional)" aria-label="Poem title" />
             </div>
-            <textarea name="content" placeholder="Pour your words here…"></textarea>
+            <textarea name="content" id="content" placeholder="Pour your words here…"></textarea>
             <div class="inline">
               <button class="btn btn-dark" type="submit">Share</button>
-              <button class="btn btn-ghost" onclick="window.location.hash='#read'" type="button">See 
-
-community</button>
+              <button class="btn btn-ghost" onclick="window.location.hash='#read'" type="button">See community</button>
             </div>
-            <div class="helper">Now you can save your poems to the database!</div>
+            <div class="helper">Note: On GitHub Pages, posts are temporary (demo mode).</div>
           </div>
         </form>
       </article>
 
-      <!-- READ SECTION -->
-      <div class="poem-list span-6" role="list" id="poem-list"></div>
+      <div class="poem-list span-6" role="list" id="poem-list">
+        </div>
 
-      <!-- PROMPTS / EVENTS -->
       <article class="card span-4" id="prompts">
         <div class="meta">Weekly prompt</div>
         <h3>Writing Prompt: “Threshold”</h3>
@@ -133,39 +115,27 @@ community</button>
       <article class="card span-4">
         <div class="meta">Resources</div>
         <h3>Inspiration Board</h3>
-        <p>Try forms: haiku, free verse, tanka, micro-poems. Explore themes: belonging, silence, mornings, small 
-
-joys.</p>
+        <p>Try forms: haiku, free verse, tanka, micro-poems. Explore themes: belonging, silence, mornings, small joys.</p>
       </article>
 
-      <!-- ABOUT SECTION -->
       <article class="card span-12" id="about">
-        <div class="about">
+        <div class="about" style="grid-template-columns: 1fr;">
           <div class="paper">
             <div class="meta">Why we exist</div>
             <h3>NoOne’sJudging</h3>
-            <p>We built this space for people who write in the margins of their day. You don’t need a workshop. You need 
-
-a warm room where your words are enough.</p>
-            <p>As the platform grows, we’ll add simple ways to share, save, and explore poems — always with consent, 
-
-control, and care.</p>
+            <p>We built this space for people who write in the margins of their day. You don’t need a workshop. You need a warm room where your words are enough.</p>
+            <p>As the platform grows, we’ll add simple ways to share, save, and explore poems — always with consent, control, and care.</p>
             <div class="inline" style="margin-top:8px;">
               <a class="btn btn-dark" href="#write">Write now</a>
               <a class="btn btn-ghost" href="#read">Discover poems</a>
             </div>
           </div>
-          <div class="badge-tile">
-        
-            
           </div>
-        </div>
       </article>
 
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <div class="foot">
       <div class="foot-inner">
@@ -186,41 +156,64 @@ control, and care.</p>
     <div class="tiny">© <span id="y">2025</span> NoOne’sJudging — Built with HTML & CSS</div>
   </footer>
 
-  <!-- SCRIPT -->
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // AJAX form submit
+    // DUMMY DATA (Since GitHub Pages cannot run PHP)
+    const demoPosts = [
+      {
+        title: "Welcome Writer",
+        author: "Admin",
+        content: "Welcome to NoOne's Judging.\nSince this site is hosted on GitHub, PHP databases won't work.\n\nBut go ahead—try the form! Your poem will appear instantly (until you refresh)."
+      },
+      {
+        title: "Morning Coffee",
+        author: "Unknown",
+        content: " steam rising\n like a prayer\n disappearing before\n it reaches the ceiling."
+      }
+    ];
+
+    // Load posts
+    function loadPosts() {
+      const container = document.getElementById('poem-list');
+      container.innerHTML = demoPosts.map(p => `
+        <div class="poem" role="listitem">
+          <h4>${p.title || 'Untitled'}</h4>
+          <div class="by">by ${p.author || 'Anonymous'}</div>
+          <p>${p.content}</p>
+        </div>
+      `).join('');
+    }
+
+    // Handle Form Submit (Simulation)
     const form = document.getElementById('write-form');
     form.addEventListener('submit', function(e){
       e.preventDefault();
-      const formData = new FormData(form);
-      fetch('save_post.php', { method:'POST', body:formData })
-        .then(res => res.text())
-        .then(() => {
-          alert('Poem saved successfully!');
-          form.reset();
-          loadPosts();
-        });
+      
+      // Get values
+      const title = document.getElementById('title').value;
+      const author = document.getElementById('author').value;
+      const content = document.getElementById('content').value;
+
+      if(!content) {
+        alert("Please write something first!");
+        return;
+      }
+
+      // Add to the top of the list temporarily
+      demoPosts.unshift({
+        title: title,
+        author: author,
+        content: content
+      });
+
+      // Reload list and clear form
+      loadPosts();
+      form.reset();
+      alert('Poem shared! (Visible until you refresh)');
     });
 
-    // Load posts dynamically
-    function loadPosts(){
-      fetch('get_posts.php')
-        .then(res => res.json())
-        .then(posts => {
-          const container = document.getElementById('poem-list');
-          container.innerHTML = posts.map(p => `
-            <div class="poem" role="listitem">
-              <h4>${p.title || 'Untitled'}</h4>
-              <div class="by">by ${p.author || 'Anonymous'}</div>
-              <p>${p.content}</p>
-            </div>
-          `).join('');
-        });
-    }
-
-    // initial load
+    // Initial load
     loadPosts();
   </script>
 
