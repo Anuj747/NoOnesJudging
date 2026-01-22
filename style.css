@@ -20,9 +20,7 @@ body {
   margin:0;
   background:var(--bg);
   color:var(--ink);
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe 
-
-UI Emoji";
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
   line-height: 1.6;
   text-rendering: optimizeLegibility;
 }
@@ -33,21 +31,13 @@ UI Emoji";
   padding: 28px;
 }
 
-/* Subtle paper grain */
+/* Subtle paper grain - FIXED (Single line URL to prevent errors) */
 body:before {
   content:"";
   position:fixed;
   inset:0;
   pointer-events:none;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" 
-
-viewBox="0 0 120 120"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" 
-
-numOctaves="2"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" 
-
-tableValues="0 0 .02 .04"/></feComponentTransfer></filter><rect width="120" height="120" filter="url(%23n)" 
-
-opacity="0.25"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 0 .02 .04"/></feComponentTransfer></filter><rect width="120" height="120" filter="url(%23n)" opacity="0.25"/></svg>');
   opacity:.12;
   mix-blend-mode:multiply;
   z-index:0;
@@ -281,10 +271,10 @@ header.nav {
 .event strong { font-family:Lora, serif; font-size:18px; }
 .event .detail { color:var(--soft); font-size:15px; }
 
-/* ABOUT */
+/* ABOUT - UPDATED */
 .about {
   display:grid;
-  grid-template-columns: 1.2fr .8fr;
+  grid-template-columns: 1fr; /* Full width since image is gone */
   gap:18px;
   align-items:stretch;
 }
@@ -298,6 +288,7 @@ header.nav {
 .about h3 { font-family:Lora, serif; font-size:26px; margin:0 0 6px; }
 .about p { color:var(--soft); }
 .badge-tile {
+  /* This class is effectively unused now, but kept for safety */
   display:grid;
   place-items:center;
   border-radius:var(--radius-xl);
